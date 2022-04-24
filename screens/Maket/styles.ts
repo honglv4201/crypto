@@ -31,5 +31,12 @@ const styles = StyleSheet.create({
   view: {
     marginBottom: "5px",
   },
+  market: {
+    alignSelf: "center",
+    marginLeft: "10px",
+    marginTop: "10px",
+    fontWeight: "bold",
+    fontSize: 24,
+  },
 });
 export default styles;

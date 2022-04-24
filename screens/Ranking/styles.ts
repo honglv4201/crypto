@@ -13,16 +13,14 @@ const styles = StyleSheet.create({
     height: "160px",
     alignSelf: "center",
   },
-  titleBalance: {
+  titleRaking: {
     marginTop: "25px",
     marginLeft: "10px",
-  },
-  quantity: {
-    marginLeft: "10px",
-    marginTop: "10px",
     fontWeight: "bold",
     fontSize: 24,
+    alignItems: "center",
   },
+
   flat: {
     width: "100%",
     paddingHorizontal: "12px",

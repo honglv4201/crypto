@@ -32,20 +32,108 @@ const PortFolioCoins = [
     amount: 13.5,
     valueUSD: 221.34,
   },
+  {
+    id: "1",
+    name: "Etherium",
+    symbol: "ET",
+    image:
+      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
+    amount: 13.5,
+    valueUSD: 221.34,
+  },
+  {
+    id: "1",
+    name: "Etherium",
+    symbol: "ET",
+    image:
+      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
+    amount: 13.5,
+    valueUSD: 221.34,
+  },
+  {
+    id: "1",
+    name: "Etherium",
+    symbol: "ET",
+    image:
+      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
+    amount: 13.5,
+    valueUSD: 221.34,
+  },
+  {
+    id: "1",
+    name: "Etherium",
+    symbol: "ET",
+    image:
+      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
+    amount: 13.5,
+    valueUSD: 221.34,
+  },
+  {
+    id: "1",
+    name: "Etherium",
+    symbol: "ET",
+    image:
+      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
+    amount: 13.5,
+    valueUSD: 221.34,
+  },
+
+  {
+    id: "1",
+    name: "Etherium",
+    symbol: "ET",
+    image:
+      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
+    amount: 13.5,
+    valueUSD: 221.34,
+  },
+  {
+    id: "1",
+    name: "Etherium",
+    symbol: "ET",
+    image:
+      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
+    amount: 13.5,
+    valueUSD: 221.34,
+  },
+  {
+    id: "1",
+    name: "Etherium",
+    symbol: "ET",
+    image:
+      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
+    amount: 13.5,
+    valueUSD: 221.34,
+  },
+  {
+    id: "1",
+    name: "Etherium",
+    symbol: "ET",
+    image:
+      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
+    amount: 13.5,
+    valueUSD: 221.34,
+  },
 ];
 
 const PortFolioScreen = () => {
   return (
     <View style={styles.root}>
-      <Image source={image} style={styles.img}></Image>
-      <Text style={styles.titleBalance}>PortFolio Balance</Text>
-      <Text style={styles.quantity}>$325.000</Text>
-
       <FlatList
         style={styles.flat}
         data={PortFolioCoins}
         renderItem={({ item }) => (
           <PortFolioCoin key={item.id} data={item}></PortFolioCoin>
+        )}
+        ListHeaderComponentStyle={styles.view}
+        ListHeaderComponent={() => (
+          <>
+            <View style={styles.view}>
+              <Image source={image} style={styles.img}></Image>
+              <Text style={styles.titleBalance}>PortFolio Balance</Text>
+              <Text style={styles.quantity}>$325.000</Text>
+            </View>
+          </>
         )}
       ></FlatList>
     </View>

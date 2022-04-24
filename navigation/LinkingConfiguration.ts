@@ -25,6 +25,21 @@ const linking: LinkingOptions<RootStackParamList> = {
               TabTwoScreen: "two",
             },
           },
+          Maket: {
+            screens: {
+              TabTwoScreen: "three",
+            },
+          },
+          Ranking: {
+            screens: {
+              TabTwoScreen: "four",
+            },
+          },
+          Profile: {
+            screens: {
+              TabTwoScreen: "five",
+            },
+          },
         },
       },
       Modal: "modal",
