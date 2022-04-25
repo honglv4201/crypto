@@ -1,8 +1,10 @@
-import { View, Text, FlatList, Image } from "react-native";
+import { View, Text, FlatList, Image, Pressable } from "react-native";
 import React from "react";
 import styles from "./styles";
 import MaketCoin from "../../components/MarketCoin";
 const image = require("../../assets/images/Saly-20.png");
+import { AntDesign } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const PortFolioCoins = [
   {
@@ -35,6 +37,7 @@ const PortFolioCoins = [
 ];
 
 const MarketScreen = () => {
+  const navigator = useNavigation();
   return (
     <View style={styles.root}>
       <FlatList

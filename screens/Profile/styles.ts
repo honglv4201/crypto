@@ -60,5 +60,10 @@ const styles = StyleSheet.create({
   btn: {
     color: "white",
   },
+  hoverx: {
+    color: "#3366CC",
+    backgroundColor: "white",
+    borderColor: "#3366CC",
+  },
 });
 export default styles;

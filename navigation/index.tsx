@@ -16,6 +16,7 @@ import { ColorSchemeName, Pressable } from "react-native";
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
+import CoinDetail from "../screens/CoinDetail";
 import HomeScreen from "../screens/Home";
 import MarketScreen from "../screens/Maket";
 import ModalScreen from "../screens/ModalScreen";
@@ -60,6 +61,17 @@ function RootNavigator() {
         name="Root"
         component={BottomTabNavigator}
         options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="CoinDetail"
+        component={CoinDetail}
+        options={{
+          title: "Coin Detail",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+          headerTitleAlign: "center",
+        }}
       />
       <Stack.Screen
         name="NotFound"

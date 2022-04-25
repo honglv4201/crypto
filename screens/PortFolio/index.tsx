@@ -1,7 +1,8 @@
-import { View, Text, Image, FlatList } from "react-native";
+import { View, Text, Image, FlatList, Pressable } from "react-native";
 import React from "react";
 import styles from "./styles";
 import PortFolioCoin from "../../components/PortFolioCoin";
+import { useNavigation } from "@react-navigation/native";
 const image = require("../../assets/images/Saly-10.png");
 
 const PortFolioCoins = [

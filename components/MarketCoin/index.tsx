@@ -1,6 +1,7 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, Pressable } from "react-native";
 import React from "react";
 import styles from "./styles";
+import { useNavigation } from "@react-navigation/native";
 export interface MaketProps {
   data: {
     image: string;
@@ -15,8 +16,13 @@ const MaketCoin = (props: MaketProps) => {
   const {
     data: { image, symbol, name, changing, valueUSD },
   } = props;
+
+  const navigator = useNavigation();
   return (
-    <View style={styles.root}>
+    <Pressable
+      onPress={() => navigator.navigate("CoinDetail")}
+      style={styles.root}
+    >
       <View style={styles.leftPannel}>
         <Image style={styles.img} source={{ uri: image }}></Image>
         <View style={styles.leftText}>
@@ -35,7 +41,7 @@ const MaketCoin = (props: MaketProps) => {
           {changing > 0 && "+"} {changing}
         </Text>
       </View>
-    </View>
+    </Pressable>
   );
 };
 

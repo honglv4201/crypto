@@ -33,7 +33,7 @@ const ProfileScreen = () => {
       </View>
 
       <Pressable style={styles.btn_wrapper} onPress={signOut}>
-        <Text style={styles.btn}>Sign out</Text>
+        {(hover) => <Text style={[styles.btn]}>Sign out</Text>}
       </Pressable>
     </View>
   );
