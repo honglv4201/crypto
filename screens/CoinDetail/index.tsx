@@ -4,6 +4,7 @@ import styles from "./styles";
 import MaketCoin from "../../components/MarketCoin";
 import { AntDesign } from "@expo/vector-icons";
 import CoinPriceGraph from "../../components/coinPriceGraph";
+import { useNavigation } from "@react-navigation/native";
 const image = require("../../assets/images/Saly-20.png");
 
 const PortFolioCoins = [
@@ -42,16 +43,24 @@ const CoinDetail = () => {
     name: "BitCoin",
     image:
       "https://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/bitcoin-icon.png",
-    symbol: "USD",
+    symbol: "BTC",
     valueChange1H: 0.32,
     valueChange1D: -0.17,
     valueChange7D: 0.13,
-    valueUSD: 34234,
+    currentPrice: 34234,
+    amount: 2,
   });
 
   // handle button
+
+  const navigation = useNavigation();
   const handleBuy = () => {
-    console.warn("bought");
+    navigation.navigate("CoinExchange", { isBuy: true, coinData });
+  };
+
+  const handleSell = () => {
+    navigation.navigate("CoinExchange", { isBuy: false, coinData });
+    console.warn("sell");
   };
   const dataString = JSON.stringify([20, 45, 28, 80, 99, 43]);
   return (
@@ -80,7 +89,7 @@ const CoinDetail = () => {
       <View style={styles.middlePannel}>
         <View>
           <Text style={styles.txt_title}>Current prices</Text>
-          <Text style={styles.valueUSD}>${coinData.valueUSD}</Text>
+          <Text style={styles.valueUSD}>${coinData.currentPrice}</Text>
         </View>
 
         <View style={styles.changePannel}>
@@ -152,7 +161,7 @@ const CoinDetail = () => {
           </Pressable>{" "}
           <Pressable
             style={[styles.btnWrapper, styles.btnWrapperSell]}
-            onPress={handleBuy}
+            onPress={handleSell}
           >
             <Text style={[styles.btn]}>Sell </Text>
           </Pressable>

@@ -16,7 +16,7 @@ const PortFolioCoins = [
     valueUSD: 21.34,
   },
   {
-    id: "1",
+    id: "2",
     name: "Bit Coin",
     symbol: "BTC",
     image:
@@ -25,89 +25,7 @@ const PortFolioCoins = [
     valueUSD: 42.34,
   },
   {
-    id: "1",
-    name: "Etherium",
-    symbol: "ET",
-    image:
-      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
-    amount: 13.5,
-    valueUSD: 221.34,
-  },
-  {
-    id: "1",
-    name: "Etherium",
-    symbol: "ET",
-    image:
-      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
-    amount: 13.5,
-    valueUSD: 221.34,
-  },
-  {
-    id: "1",
-    name: "Etherium",
-    symbol: "ET",
-    image:
-      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
-    amount: 13.5,
-    valueUSD: 221.34,
-  },
-  {
-    id: "1",
-    name: "Etherium",
-    symbol: "ET",
-    image:
-      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
-    amount: 13.5,
-    valueUSD: 221.34,
-  },
-  {
-    id: "1",
-    name: "Etherium",
-    symbol: "ET",
-    image:
-      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
-    amount: 13.5,
-    valueUSD: 221.34,
-  },
-  {
-    id: "1",
-    name: "Etherium",
-    symbol: "ET",
-    image:
-      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
-    amount: 13.5,
-    valueUSD: 221.34,
-  },
-
-  {
-    id: "1",
-    name: "Etherium",
-    symbol: "ET",
-    image:
-      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
-    amount: 13.5,
-    valueUSD: 221.34,
-  },
-  {
-    id: "1",
-    name: "Etherium",
-    symbol: "ET",
-    image:
-      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
-    amount: 13.5,
-    valueUSD: 221.34,
-  },
-  {
-    id: "1",
-    name: "Etherium",
-    symbol: "ET",
-    image:
-      "https://i.pinimg.com/originals/e1/05/e9/e105e92bcab722fb8c8a98557d83873b.jpg",
-    amount: 13.5,
-    valueUSD: 221.34,
-  },
-  {
-    id: "1",
+    id: "3",
     name: "Etherium",
     symbol: "ET",
     image:

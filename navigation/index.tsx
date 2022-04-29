@@ -17,6 +17,7 @@ import { ColorSchemeName, Pressable } from "react-native";
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
 import CoinDetail from "../screens/CoinDetail";
+import CoinExchangeScreen from "../screens/CoinExchangeScreen";
 import HomeScreen from "../screens/Home";
 import MarketScreen from "../screens/Maket";
 import ModalScreen from "../screens/ModalScreen";
@@ -74,6 +75,17 @@ function RootNavigator() {
         }}
       />
       <Stack.Screen
+        name="CoinExchange"
+        component={CoinExchangeScreen}
+        options={{
+          title: "Coin Exchange",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+          headerTitleAlign: "center",
+        }}
+      />
+      <Stack.Screen
         name="NotFound"
         component={NotFoundScreen}
         options={{ title: "Oops!" }}
@@ -96,7 +108,7 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="Profile"
+      initialRouteName="Maket"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}

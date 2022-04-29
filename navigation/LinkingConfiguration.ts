@@ -14,6 +14,7 @@ const linking: LinkingOptions<RootStackParamList> = {
   config: {
     screens: {
       CoinDetail: {},
+      CoinExchange: {},
       Root: {
         screens: {
           Home: {
