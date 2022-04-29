@@ -29,7 +29,7 @@ const PortFolioCoins = [
   },
 ];
 
-const Ranking = () => {
+const RankingScreen = () => {
   return (
     <View style={styles.root}>
       <FlatList
@@ -52,4 +52,4 @@ const Ranking = () => {
   );
 };
 
-export default Ranking;
+export default RankingScreen;

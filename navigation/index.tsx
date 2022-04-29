@@ -18,15 +18,17 @@ import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
 import CoinDetail from "../screens/CoinDetail";
 import CoinExchangeScreen from "../screens/CoinExchangeScreen";
-import HomeScreen from "../screens/Home";
-import MarketScreen from "../screens/Maket";
+import HomeScreen from "../screens/HomeScreen";
+import MarketScreen from "../screens/MaketScreen";
 import ModalScreen from "../screens/ModalScreen";
 import NotFoundScreen from "../screens/NotFoundScreen";
-import PortFolioScreen from "../screens/PortFolio";
-import ProfileScreen from "../screens/Profile";
-import Ranking from "../screens/Ranking";
+import PortFolioScreen from "../screens/PortFolioScreen";
+import ProfileScreen from "../screens/ProfileScreen";
+import RankingScreen from "../screens/RankingScreen";
 import TabOneScreen from "../screens/TabOneScreen";
 import TabTwoScreen from "../screens/TabTwoScreen";
+import WelcomeScreen from "../screens/WelcomeScreen";
+import Welcome from "../screens/WelcomeScreen";
 import {
   RootStackParamList,
   RootTabParamList,
@@ -58,6 +60,17 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator>
+      <Stack.Screen
+        name="Welcome"
+        component={WelcomeScreen}
+        options={{
+          title: "Coin Detail",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+          headerTitleAlign: "center",
+        }}
+      />
       <Stack.Screen
         name="Root"
         component={BottomTabNavigator}
@@ -158,7 +171,7 @@ function BottomTabNavigator() {
 
       <BottomTab.Screen
         name="Ranking"
-        component={Ranking}
+        component={RankingScreen}
         options={{
           title: "Ranking",
           tabBarIcon: ({ color }) => (
