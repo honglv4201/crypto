@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "crypto",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "D:\\Dev\\Source\\crypto\\amplify\\backend\\api\\crypto\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authcryptof096266a"
+    }
+  }
+}
