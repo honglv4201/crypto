@@ -1,25 +1,53 @@
 import { View, Text, Image, Pressable } from "react-native";
 
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "./styles";
-import { useNavigation } from "@react-navigation/native";
-import { Auth } from "aws-amplify";
+import { CommonActions, useNavigation } from "@react-navigation/native";
+import { Auth, Hub } from "aws-amplify";
 import { CognitoHostedUIIdentityProvider } from "@aws-amplify/auth";
+import AppContext from "../../utils/AppContext";
+
 const images = require("../../../assets/images/Saly-1.png");
 const imageGGLogin = require("../../../assets/images/google-button.png");
 
+
 const WelcomeScreen = () => {
   const navigation = useNavigation();
-
-  React.useEffect(() => {
+  const { setUserId } = useContext(AppContext);
+  
+  useEffect(() => {
     const fetchUser = async () => {
       const user = await Auth.currentAuthenticatedUser();
       if (user) {
-        navigation.navigate("Root");
+        setUserId(user.attributes.sub)
+        navigation.dispatch(
+          CommonActions.reset({
+            index: 0,
+            routes: [
+              { name: 'Root' },
+            ],
+          })
+        );
       }
-    };
+    }
 
     fetchUser();
+  }, [])
+
+  useEffect(() => {
+    Hub.listen("auth", ({ payload: { event, data } }) => {
+      if (event === "signIn") {
+        setUserId(data.signInUserSession.accessToken.payload.sub)
+        navigation.dispatch(
+          CommonActions.reset({
+            index: 0,
+            routes: [
+              { name: 'Root' },
+            ],
+          })
+        );
+      }
+    });
   }, []);
 
   const handleGoHome = () => {

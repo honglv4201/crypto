@@ -6,7 +6,7 @@ import useCachedResources from "./src/hooks/useCachedResources";
 import useColorScheme from "./src/hooks/useColorScheme";
 import Navigation from "./src/navigation";
 
-import config from "./src/aws-exports";
+import config from "./aws-exports";
 Amplify.configure(config);
 
 export default function App() {

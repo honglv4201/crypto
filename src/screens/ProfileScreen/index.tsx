@@ -1,6 +1,10 @@
 import { View, Text, Image, Pressable } from "react-native";
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./styles";
+import AppContext from "../../utils/AppContext";
+import { CommonActions, useNavigation } from "@react-navigation/native";
+import {Auth, API, graphqlOperation} from "aws-amplify";
+
 const image = require("../../../assets/images/Saly-17.png");
 
 const ProfileScreen = () => {
@@ -12,9 +16,22 @@ const ProfileScreen = () => {
     email: "vanhong42201@gmail.com",
     netWorth: 195232,
   });
-  const signOut = () => {
-    console.warn("sign out");
-  };
+  const { userId } = useContext(AppContext);
+
+  const navigation = useNavigation();
+
+
+  const signOut = async () => {
+    await Auth.signOut();
+    navigation.dispatch(
+      CommonActions.reset({
+        index: 0,
+        routes: [
+          { name: 'Welcome' },
+        ],
+      })
+    );
+  }
 
   return (
     <View style={styles.root}>
