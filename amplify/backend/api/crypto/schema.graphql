@@ -10,3 +10,8 @@ type Todo @model {
   image: String
   networth: Float!
 }
+type Inventory @model {
+  productID: ID! @primaryKey(sortKeyFields: ["warehouseID"])
+  warehouseID: ID!
+  InventoryAmount: Int!
+}
